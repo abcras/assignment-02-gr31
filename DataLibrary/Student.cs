@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace DataLibrary
 {
-    internal record ImmutableStudent
+    public record ImmutableStudent
     {
         int Id { get; init; }
         string GivenName { get; init; }
         string SurName { get; init; }
 
-        Status status { get; init; }
+        public Status status { get; init; }
         DateTime StartDate { get; init; }
         DateTime EndDate { get; init; }
         DateTime GraduationDate { get; init; }
 
-        ImmutableStudent(int id, string givenName, string surName, DateTime startDate, DateTime endDate, DateTime graduationDate)
+        public ImmutableStudent(int id, string givenName, string surName, DateTime startDate, DateTime endDate, DateTime graduationDate)
         {
             Id = id;
             GivenName = givenName;
@@ -59,7 +59,7 @@ namespace DataLibrary
          If DateTime.Now > GraduationDate && EndDate == GraduationDate = Graduated
          */
 
-    enum Status
+    public enum Status
     {
         New,
         Active,
