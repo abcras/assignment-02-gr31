@@ -15,4 +15,30 @@ public class QueriesTests
         // Assert
         Assert.Equal(expected, rowlingList);
     }
+
+    [Fact]
+    public void Given_When_When()
+    {
+        // Arrange
+        int expected = 1977;
+
+        // Act
+        var year = FindMrDarthSith();
+
+        // Assert
+        Assert.Equal(expected, year);
+    }
+
+    [Fact]
+    public void Given_When_When_When()
+    {
+        // Arrange
+        var expected = new List<(string, int?)> {("Harry Potter", 1997), ("Voldemort", 1997)};
+
+        // Act
+        var year = FindAllHarryPotterWizards();
+
+        // Assert
+        Assert.Equivalent(expected, year);
+    }
 }
