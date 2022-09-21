@@ -30,15 +30,19 @@ public static class Queries
             select (wz.Name, wz.Year);
     }
 
-    // We could not complete this, as the assignment wishes to Group By creator, and return a list of names. We cant return outside the group 
     public static IEnumerable<string> FindWizardsGroupedAndSorted() {
         WizardCollection wzCollection = WizardCollection.Create();
         
-        return 
-            from wz in wzCollection
-                 orderby wz.Creator
-                 orderby wz.Name
-                 group wz by wz.Creator into g
-                 select g.Key;
+        var groups = from wz in wzCollection
+                        orderby wz.Name descending
+                        group wz by wz.Creator into g
+                        orderby g.Key descending
+                        select g;
+
+        foreach(var group in groups){
+            foreach(var wz in group){
+                yield return wz.Name;
+            }
+        }
     }
 }
