@@ -3,7 +3,7 @@ namespace Assignment2.Tests;
 public class DelegatesTests
 {
     [Fact]
-    public void Given_When_When_When_When_When_When_When_When()
+    public void GivenStringReturnsReversedString()
     {
         // Arrange
         string str = "reverse my order";
@@ -18,7 +18,7 @@ public class DelegatesTests
     }
 
     [Fact]
-    public void Given_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When()
+    public void GivenFourPointFiveAndEightPointFiveReturnsThirdyEightPointTwentyFive()
     {
         // Arrange
         double myx = 4.5, myy = 8.5;
@@ -33,7 +33,7 @@ public class DelegatesTests
     }
 
     [Fact]
-    public void Given_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When_When()
+    public void GivenStringWithZerosInFrontReturnsAndIntWithoutZerosReturnsTrue()
     {
         // Arrange
         string str = " 0042";

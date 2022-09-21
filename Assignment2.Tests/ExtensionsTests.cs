@@ -40,7 +40,7 @@ public class ExtensionsTests
     }
 
     [Fact]
-    public void givenHttpsUriReturnFalse() {
+    public void givenHttpsUriReturnTrue() {
         // Arrange
         Uri uri = new("https://www.google.com/");
 
@@ -64,7 +64,7 @@ public class ExtensionsTests
     }
 
     [Fact]
-    public void GivenFiveWordsRetunsFour() {
+    public void GivenFourWordsReturnsFour() {
         // Arrange
         string str = "this string has 4 words";
 
