@@ -11,9 +11,11 @@ public class QueriesTests
 
         // Act
         var rowlingList = FindMsRowling();
+        var rowlingListWithExtensions = FindMsRowlingWithExtensions();
 
         // Assert
         Assert.Equal(expected, rowlingList);
+        Assert.Equal(expected, rowlingListWithExtensions);
     }
 
     [Fact]
@@ -24,9 +26,11 @@ public class QueriesTests
 
         // Act
         var year = FindMrDarthSith();
+        var yearWithExtensions = FindMrDarthSithWithExtensions();
 
         // Assert
         Assert.Equal(expected, year);
+        Assert.Equal(expected, yearWithExtensions);
     }
 
     [Fact]
@@ -37,9 +41,11 @@ public class QueriesTests
 
         // Act
         var harryPotterWizardsList = FindAllHarryPotterWizards();
+        var harryPotterWizardsListWithExtensions = FindAllHarryPotterWizardsWithExtensions();
 
         // Assert
         Assert.Equivalent(expected, harryPotterWizardsList);
+        Assert.Equivalent(expected, harryPotterWizardsListWithExtensions);
     }
 
     [Fact]
@@ -59,8 +65,10 @@ public class QueriesTests
 
         // Act
         var groupedWizardsList = FindWizardsGroupedAndSorted();
+        var groupedWizardsListWithExtensions = FindWizardsGroupedAndSortedWithExtensions();
 
         // Assert
         Assert.Equal(expected, groupedWizardsList);
+        Assert.Equal(expected, groupedWizardsListWithExtensions);
     }
 }
