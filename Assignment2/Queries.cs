@@ -77,15 +77,11 @@ public static class Queries
     public static IEnumerable<string> FindWizardsGroupedAndSortedWithExtensions() {
         WizardCollection wzCollection = WizardCollection.Create();
         
-        var groups = 
+        return
             wzCollection
             .OrderByDescending(wz => wz.Name)
             .GroupBy(wz => wz.Creator)
             .OrderByDescending(group => group.Key)
-            .SelectMany(group => group.Select(wz => wz));
-
-        foreach(var wz in groups){
-            yield return wz.Name;
-        }
+            .SelectMany(group => group.Select(wz => wz.Name));
     }
 }
